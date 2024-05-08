@@ -1,3 +1,10 @@
+/* CSS untuk mengatur lebar minimum responsif */
+@media (max-width: 383px) {
+    body {
+        min-width: 383px; /* Lebar minimum responsif */
+        overflow-x: hidden; /* Mencegah scroll horizontal */
+    }
+}
 /* CSS untuk tombol "Download" */
 .flex_row2 {
   display: flex;
