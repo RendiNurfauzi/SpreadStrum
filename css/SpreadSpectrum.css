@@ -1,9 +1,10 @@
 /* CSS untuk mengatur lebar minimum responsif */
-@media (max-width: 383px) {
-    body {
-        min-width: 383px; /* Lebar minimum responsif */
-        overflow-x: hidden; /* Mencegah scroll horizontal */
-    }
+@media (max-width: 700px) {
+  body {
+      min-width: 700px; /* Lebar minimum responsif */
+      max-width: 700px; /* Lebar maksimum saat mengecil */
+      overflow-x: hidden; /* Mencegah scroll horizontal */
+  }
 }
 /* CSS untuk tombol "Download" */
 .flex_row2 {
@@ -83,7 +84,7 @@
   .spread-spectrum .flex_col {
     margin: 16px 16px 64px;
   }
-}
+}/*
 @media (max-width: 479px) {
   .spread-spectrum .flex_col {
     margin: 16px auto 64px;
@@ -93,7 +94,8 @@
   .spread-spectrum .flex_col {
     margin: 16px auto 50px;
   }
-}
+}*/
+
 .spread-spectrum .flex_col1 {
   position: relative;
   display: flex;
@@ -118,12 +120,13 @@
   gap: 18px 0px;
   width: 95.13%;
 }
+/*
 @media (max-width: 479px) {
   .spread-spectrum .flex_col3 {
     -moz-column-gap: 8px;
     column-gap: 8px;
   }
-}
+}*/
 @keyframes typing {
   from { width: 0; }
   to { width: 50%; }
@@ -143,12 +146,13 @@
     font-size: 16px;
   }
 }
+/*
 @media (max-width: 479px) {
   .spread-spectrum .highlight {
     margin: 0px 170px 0px 70px;
     width: 50%;
   }
-}
+}*/
 .spread-spectrum .flex_row {
   position: relative;
   display: flex;
@@ -163,6 +167,7 @@
     gap: 30px 10px;
   }
 }
+/*
 @media (max-width: 479px) {
   .spread-spectrum .flex_row {
     margin-top: unset;
@@ -170,7 +175,7 @@
     margin-bottom: unset;
     margin-left: unset;
   }
-}
+}*/
 .spread-spectrum .btn {
   position: relative;
   display: flex;
@@ -192,7 +197,7 @@
     width: 100%;
     min-width: unset;
   }
-}
+}/*
 @media (max-width: 479px) {
   .spread-spectrum .btn {
     margin: 0px auto 0px 0px;
@@ -203,7 +208,7 @@
   .spread-spectrum .btn {
     width: 65%;
   }
-}
+}*/
 .spread-spectrum .content_box {
   position: relative;
   display: flex;
@@ -215,7 +220,7 @@
   outline-offset: -1px;
   box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.247);
 }
-@media (max-width: 479px) {
+/**@media (max-width: 479px) {
   .spread-spectrum .content_box {
     margin: 0px auto 0px 0px;
     width: 70%;
@@ -225,7 +230,7 @@
   .spread-spectrum .content_box {
     width: 65%;
   }
-}
+}**/
 .spread-spectrum .flex_col4 {
   position: relative;
   display: flex;
@@ -236,11 +241,12 @@
   width: 434px;
   max-width: 85%;
 }
+/*
 @media (max-width: 383px) {
   .spread-spectrum .flex_col4 {
     gap: 50px 0px;
   }
-}
+}*/
 .spread-spectrum .flex_col5 {
   position: relative;
   display: flex;
@@ -348,11 +354,12 @@ margin-top: 5px;
   padding: 10px; /* Padding agar teks tidak terlalu dekat dengan border */
 
 }
+/*
 @media (max-width: 479px) {
   .spread-spectrum .Binary_Output {
     width: 50%;
   }
-}
+}*/
 .spread-spectrum .flex_col7 {
   position: relative;
   display: flex;
@@ -376,6 +383,7 @@ margin-top: 5px;
     font-size: 16px;
   }
 }
+/*
 @media (max-width: 479px) {
   .spread-spectrum .highlight2 {
     margin: 0px auto 0px 0px;
@@ -385,7 +393,7 @@ margin-top: 5px;
   .spread-spectrum .highlight2 {
     margin: 0px auto 0px 65px;
   }
-}
+}*/
 .spread-spectrum .Kolom_Input_Output {
   resize: none; /* Menonaktifkan fitur resize */
   position: relative;
@@ -401,6 +409,7 @@ margin-top: 5px;
   text-align: center; /* Teks ditengah */
   padding: 10px; /* Padding agar teks tidak terlalu dekat dengan border */
 }
+/*
 @media (max-width: 479px) {
   .spread-spectrum .rect4 {
     margin: 0px auto 0px 0px;
@@ -411,7 +420,7 @@ margin-top: 5px;
   .spread-spectrum .rect4 {
     width: 65%;
   }
-}
+}*/
 .spread-spectrum .flex_row1 {
   position: relative;
   display: flex;
@@ -449,6 +458,7 @@ margin-top: 5px;
     min-width: unset;
   }
 }
+/*
 @media (max-width: 479px) {
   .spread-spectrum .btn1 {
     margin: 0px auto 0px 0px;
@@ -459,7 +469,7 @@ margin-top: 5px;
   .spread-spectrum .btn1 {
     width: 65%;
   }
-}
+}*/
 .spread-spectrum .btn2 {
   position: relative;
   display: flex;
@@ -482,6 +492,7 @@ margin-top: 5px;
     min-width: unset;
   }
 }
+/*
 @media (max-width: 479px) {
   .spread-spectrum .btn2 {
     margin: 0px auto 0px 0px;
@@ -492,7 +503,7 @@ margin-top: 5px;
   .spread-spectrum .btn2 {
     width: 65%;
   }
-}
+}*/
 
 .spread-spectrum .btn:hover {
   background-color: red;
