@@ -1,8 +1,8 @@
 /* CSS untuk mengatur lebar minimum responsif */
-@media (max-width: 700px) {
+@media (max-width: 338px) {
   body {
-      min-width: 700px; /* Lebar minimum responsif */
-      max-width: 700px; /* Lebar maksimum saat mengecil */
+      min-width: 338px; /* Lebar minimum responsif */
+      max-width: 338px; /* Lebar maksimum saat mengecil */
       overflow-x: hidden; /* Mencegah scroll horizontal */
   }
 }
