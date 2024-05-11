@@ -68,7 +68,7 @@ document.getElementById('encodeButton').addEventListener('click', function() {
 
 // Event listener untuk button "DOWNLOAD"
 document.getElementById('downloadButton').addEventListener('click', function() {
-    let processedImagePath = 'path_to_processed_image.png'; // Ganti dengan path gambar yang telah di proses
+    let processedImagePath = 'https://rendinurfauzi.github.io/SpreadStrum/path_to_processed_image.png'; // Ganti dengan URL gambar yang telah di proses
     let downloadLink = document.createElement('a');
     downloadLink.href = processedImagePath;
     downloadLink.download = 'processed_image.png';
