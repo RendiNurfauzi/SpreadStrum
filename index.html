@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,10 +14,7 @@
     <script type="text/javascript" src="https://unpkg.com/sticky-js@1.3.0/dist/sticky.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
 
-
-
 </head>
-
 <body class="flex-column">
     <div class="spread-spectrum root">
         <div class="content_box1">
@@ -36,11 +31,11 @@
                             <div class="flex_col4">
                                 <div class="flex_col5">
                                     <h5 class="highlight1">PREVIEW</h5>
-                                    <img class="image" src="./assets/anonymous_mask_graphic.png" alt="alt text" />
+                                    <img id="image" class="image" src="./assets/anonymous_mask_graphic.png" alt="alt text" />
                                 </div>
                                 <div class="flex_col6">
                                     <h5 class="highlight11">BINARY REPRESENTATION</h5>
-                                    <textarea class="Binary_Output"></textarea>
+                                    <textarea id="Binary_Output" class="Binary_Output"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -50,19 +45,22 @@
                         <textarea class="Kolom_Input_Output"></textarea>
                     </div>
                 </div>
-                <div class="flex_row1"><button class="btn1">UPLOAD IMAGE</button><button class="btn2">ENCODE</button></div>
+                <div class="flex_row1">
+                    <button id="uploadButton" class="btn1">UPLOAD IMAGE</button>
+                    <button id="encodeButton" class="btn2">ENCODE</button>
+                </div>
                 <div class="flex_row2">
-                    <button class="btn1">DOWNLOAD</button>
+                    <button id="downloadButton" class="btn1">DOWNLOAD</button>
+                </div>
             </div>
         </div>
     </div>
+    <script src="encode.js"></script>
     <script type="text/javascript">
         AOS.init();
         new Sticky('.sticky-effect');
     </script>
-</body>
 
-</html>
-</html>
+</body>
 </html>
 </html>
