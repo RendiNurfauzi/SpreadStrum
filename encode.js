@@ -61,7 +61,7 @@ document.getElementById('uploadButton').addEventListener('click', function() {
 
 // Event listener untuk button "ENCODE"
 document.getElementById('encodeButton').addEventListener('click', function() {
-    let imagePath = 'path_to_uploaded_image.png'; // Ganti dengan path gambar yang diupload
+    let imagePath = 'https://rendinurfauzi.github.io/SpreadStrum/path_to_uploaded_image.png'; // Ganti dengan path gambar yang diupload
     let text = document.querySelector('.Kolom_Input_Output').value;
     spreadtrumEncryptImage(imagePath, text);
 });
