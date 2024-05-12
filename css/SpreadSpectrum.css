@@ -12,6 +12,11 @@
   justify-content: center;
   margin-top: 10px; /* Jarak antara tombol "DECODE" dan "DOWNLOAD" */
 }
+#hiddenCanvas {
+  width: auto; /* Atau sesuaikan dengan kebutuhan */
+  height: auto; /* Atau sesuaikan dengan kebutuhan */
+  display: block;
+}
 /* CSS untuk menyorot tombol "ENCODE PAGE" saat diencode */
 .spread-spectrum .btn-Active {
   position: relative;
@@ -284,10 +289,9 @@
   }
 }
 .spread-spectrum .highlight55 {
-  margin: -35px -20px; /* Atur margin atas dan bawah */
-margin-top: 5px;
-  width: 600px;
-  flex-shrink: 0;
+  position: center; /* atau 'absolute' tergantung pada layout yang Anda inginkan */
+  width: 250%; /* Mengikuti lebar dari .content_box */
+  max-width: 250%; /* Memastikan tidak melebihi lebar container */
   color: #F00;
   text-align: justify;
   font-family: "Inria Serif";
@@ -340,7 +344,7 @@ margin-top: 5px;
     font-size: 16px;
   }
 }
-.spread-spectrum .Binary_Output {
+.spread-spectrum .Key_input {
   resize: none; /* Menonaktifkan fitur resize */
   position: relative;
   width: 100%;

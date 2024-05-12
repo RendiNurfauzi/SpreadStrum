@@ -36,11 +36,10 @@
                             <div class="flex_col4">
                                 <div class="flex_col5">
                                     <h5 class="highlight1">PREVIEW</h5>
-                                    <img class="image" src="./assets/anonymous_mask_graphic.png" alt="alt text" />
+                                    <img id="previewImage" class="image" src="./assets/anonymous_mask_graphic.png" alt="alt text" />
+                                    <canvas id="hiddenCanvas" style="display:none;"></canvas>
                                 </div>
                                 <div class="flex_col6">
-                                    <h5 class="highlight11">BINARY REPRESENTATION</h5>
-                                    <textarea class="Binary_Output"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -50,17 +49,25 @@
                         <textarea class="Kolom_Input_Output"></textarea>
                     </div>
                 </div>
-                <div class="flex_row1"><button class="btn1">UPLOAD IMAGE</button><button class="btn2">DECODE</button></div>
+                <div class="flex_row1">
+                    <button id="uploadButton" class="btn1">UPLOAD IMAGE</button>
+                    <input type="file" id="fileInput" style="display: none;" />
+                    <button id="decodeButton" class="btn2">DECODE</button></div>
 
             </div>
         </div>
     </div>
+
+
+    <script src="decode.js"></script>
     <script type="text/javascript">
         AOS.init();
         new Sticky('.sticky-effect');
     </script>
 </body>
 
+</html>
+</html>
 </html>
 </html>
 </html>

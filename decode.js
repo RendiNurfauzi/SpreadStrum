@@ -33,11 +33,13 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
     }
 });
 
-document.getElementById('encodeButton').addEventListener('click', function() {
-    spreadSpectrum();
-    
-});
+document.getElementById('decodeButton').addEventListener('click', decodeMessageFromImage);
 
+//function decodespreadSpectrum() {
+    
+//}
+
+// Fungsi untuk mengacak array dengan seed
 function shuffleArray(array, seed) {
     let m = array.length, t, i;
     while (m) {
@@ -50,54 +52,49 @@ function shuffleArray(array, seed) {
     return array;
 }
 
-
-function spreadSpectrum() {
+function stringToBitArray(string) {
+    const bitArray = [];
+    for (let i = 0; i < string.length; i++) {
+        const charCode = string.charCodeAt(i);
+        for (let j = 7; j >= 0; j--) {
+            bitArray.push((charCode >> j) & 1);
+        }
+    }
+    return bitArray;
+}
+function decodeMessageFromImage() {
     const canvas = document.getElementById('hiddenCanvas');
     const ctx = canvas.getContext('2d');
     const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imgData.data;
-    const message = document.getElementById('secretMessage').value;
-    const messageBits = stringToBitArray(message);
-    
-    if (messageBits.length * 8 > data.length) {
-        alert('Pesan terlalu panjang untuk gambar ini.');
-        return;
-    }
-    
-    // Membuat array indeks piksel dan mengacaknya
+
+    // Membuat array indeks piksel dan mengacaknya dengan seed yang sama
     let pixelIndices = Array.from({length: data.length}, (_, i) => i);
     pixelIndices = shuffleArray(pixelIndices, 128); // menggunakan seed 128
-    
-    for (let i = 0; i < messageBits.length; i++) {
+
+    let bits = [];
+    for (let i = 0; i < data.length; i += 8) {
+        const pixelIndex = pixelIndices[i];
+        const bit = data[pixelIndex] & 1; // Mengambil least significant bit
+        bits.push(bit);
+    }
+
+    const message = bitArrayToString(bits);
+    document.querySelector('.Kolom_Input_Output').value = message;
+}
+
+function bitArrayToString(bitArray) {
+    let string = '';
+    for (let i = 0; i < bitArray.length; i += 8) {
+        let byte = 0;
         for (let j = 0; j < 8; j++) {
-            const pixelIndex = pixelIndices[i * 8 + j];
-            data[pixelIndex] = (data[pixelIndex] & ~1) | messageBits[i];
+            byte |= bitArray[i + j] << (7 - j);
         }
-    }
-    
-    ctx.putImageData(imgData, 0, 0);
-    alert('Pesan telah di-encode ke dalam gambar menggunakan metode Spread Spectrum.');
-    
-    function stringToBitArray(string) {
-        const bitArray = [];
-        for (let i = 0; i < string.length; i++) {
-            const charCode = string.charCodeAt(i);
-            for (let j = 7; j >= 0; j--) {
-                bitArray.push((charCode >> j) & 1);
-            }
+        if (byte === 0) {
+            break; // Menghentikan pembacaan jika menemukan byte 0, asumsi sebagai terminator
         }
-        return bitArray;
+        string += String.fromCharCode(byte);
     }
-    
-}    
+    return string;
+}
 
-
-
-document.getElementById('downloadButton').addEventListener('click', function() {
-    const canvas = document.getElementById('hiddenCanvas');
-    const image = canvas.toDataURL('image/png');
-    const link = document.createElement('a');
-    link.download = 'encoded-image.png';
-    link.href = image;
-    link.click();
-});

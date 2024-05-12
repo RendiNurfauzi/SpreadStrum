@@ -31,22 +31,22 @@
                             <div class="flex_col4">
                                 <div class="flex_col5">
                                     <h5 class="highlight1">PREVIEW</h5>
-                                    <img id="image" class="image" src="./assets/anonymous_mask_graphic.png" alt="alt text" />
+                                    <img id="previewImage" class="image" src="./assets/anonymous_mask_graphic.png" alt="alt text" />
+                                    <canvas id="hiddenCanvas" style="display:none;"></canvas>
                                 </div>
                                 <div class="flex_col6">
-                                    <h5 class="highlight11">BINARY REPRESENTATION</h5>
-                                    <textarea id="Binary_Output" class="Binary_Output"></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="flex_col7">
                         <h5 class="highlight2">INPUT MESSAGE</h5>
-                        <textarea class="Kolom_Input_Output"></textarea>
+                        <textarea id="secretMessage" class="Kolom_Input_Output"></textarea>
                     </div>
                 </div>
                 <div class="flex_row1">
                     <button id="uploadButton" class="btn1">UPLOAD IMAGE</button>
+                    <input type="file" id="fileInput" style="display: none;" />
                     <button id="encodeButton" class="btn2">ENCODE</button>
                 </div>
                 <div class="flex_row2">
