@@ -316,7 +316,7 @@
 
 .spread-spectrum .image {
   position: relative;
-  width: 100%;
+  width: 150%;
   -o-object-fit: cover;
   object-fit: cover;
   animation: fadeIn 5s; /* Durasi animasi 2 detik */
